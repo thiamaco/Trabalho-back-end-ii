@@ -15,9 +15,11 @@ import javax.servlet.annotation.WebServlet;
 public class CriaUsuario extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
         String nome = request.getParameter("nome");
         String email = request.getParameter("email");
         String senha = request.getParameter("senha");
+
         try (Connection connection = ConnectionFactory.getConnection()){
             
             // Inserir os dados do formulário no banco de dados
@@ -37,7 +39,7 @@ public class CriaUsuario extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         out.println("<html><body>");
-        out.println("<h1>Usuario Criado ADA!</h1>");
+        out.println("<h1>Usuario Criado 1ADA!</h1>");
         out.println("</body></html>");
     }
 }

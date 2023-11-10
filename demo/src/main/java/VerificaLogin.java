@@ -1,3 +1,4 @@
+
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -18,7 +19,7 @@ public class VerificaLogin extends HttpServlet {
         if (Valida(email)) {
             response.sendRedirect("registrodejogos.html");
         } else {
-            response.sendRedirect("criaconta.html");
+            response.sendRedirect("criarconta.html");
         }
             }
 

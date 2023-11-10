@@ -1,15 +1,16 @@
+
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Connection;
 
 public class ConnectionFactory {
-    //private static Connection c = null;
-   // private ConnectionFactory(){}  
-    //private static String url= "jdbc:mysql://localhost/thiamaco";
-    //private static String user="thiamaco";
-    //private static String pass="thiamaco";
+    private static Connection c = null;
+    private ConnectionFactory(){}  
+    private static String url= "jdbc:mysql://localhost/thiamaco";
+    private static String user="thiamaco";
+    private static String pass="thiamaco";
 
-    /*public static Connection getConnection() throws SQLException {
+public static Connection getConnection() throws SQLException {
         if(c==null){
             c= DriverManager.getConnection(url,user,pass);
         }else{
@@ -19,8 +20,8 @@ public class ConnectionFactory {
         }
         return c;
     }
-    */
-
+    
+/* 
     private static final String JDBC_URL = "jdbc:mysql://localhost/thiamaco";
     private static final String JDBC_USER = "thiamaco";
     private static final String JDBC_PASSWORD = "thiamaco";
@@ -32,5 +33,5 @@ public class ConnectionFactory {
             throw new SQLException("Driver JDBC não encontrado", e);
         }
     }
-
+*/
 }

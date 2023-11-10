@@ -1,3 +1,4 @@
+
 public class Usuario {
     private int id;
     private String nome;
@@ -6,9 +7,17 @@ public class Usuario {
     private String perfil;
 
 
-    public Usuario(int id, String nome,String login, String senha, String perfil){
+   /*  public Usuario(int id, String nome,String login, String senha, String perfil){
+        this.id = id;
+        this.nome = nome;
+        this.login = login;
+        this.senha = senha;
+        this.perfil = perfil;
+        
 
     }
+
+    */
     public int getId() {
         return id;
     }

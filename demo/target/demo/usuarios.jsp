@@ -15,6 +15,7 @@
             <th>Email</th>
             <!-- Adicione outras colunas, se necessário -->
         </tr>
+        <p>${resultado}</p>
         <c:forEach var="row" items="${dados}">
             <tr>
                 <td>${row.id}</td>
