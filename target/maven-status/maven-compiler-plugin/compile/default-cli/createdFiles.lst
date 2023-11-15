@@ -1,0 +1,16 @@
+com\test\controller\AdicionarJogo.class
+com\test\model\UsuarioDAO.class
+com\test\controller\VerUsuarios.class
+com\test\controller\AprovarJogos.class
+com\test\controller\Filtrar.class
+com\test\controller\CriaUsuario.class
+com\test\model\Usuario.class
+com\test\controller\VerificaLogin.class
+com\test\controller\DeletarJogo.class
+com\test\controller\AprovarUsuario.class
+com\test\controller\ExibirJogos.class
+com\test\model\Jogos.class
+com\test\model\JogosDAO.class
+com\test\persist\ConnectionFactory.class
+com\test\Main.class
+com\test\controller\DeletarUsuario.class
