@@ -26,6 +26,9 @@ public class AdicionarJogo extends HttpServlet {
         String estadio = request.getParameter("estadio");
         JogosDAO jdao = new JogosDAO();
         Jogos jogo = new Jogos(id_jogo,id_usuario, horario, madante, gol_mandante, visitante, gol_visitante, estadio, false);
+        /*Jogos jogo = new Jogos();
+        jogo.setIdJogo(id_jogo);*/
+
         jdao.adicionar(jogo);
         response.sendRedirect("views/registrodejogos.jsp");
     }   

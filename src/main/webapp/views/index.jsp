@@ -1,4 +1,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+
+<%
+String currentPage = request.getRequestURL().toString();
+                    Cookie cookie = new Cookie("Ultima_pagina_visitada", currentPage);
+                    cookie.setPath("/");
+                    response.addCookie(cookie); 
+%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

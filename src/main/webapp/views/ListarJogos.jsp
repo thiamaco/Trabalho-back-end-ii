@@ -1,11 +1,18 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
   <%@ page import="com.test.model.Jogos" %>
     <%@ page import="java.util.ArrayList" %>
-
+      <%@ page import="java.util.Arrays" %>
+        <%@ page import="javax.servlet.http.Cookie" %>
       
 
 <% if (session.getAttribute("usuarioAutenticado") !="usuario" && session.getAttribute("usuarioAutenticado")
 !="admin" ) { response.sendRedirect("views/index.jsp"); } %>
+<%
+String currentPage = request.getRequestURL().toString();
+                    Cookie cookie = new Cookie("Ultima_pagina_visitada", currentPage);
+                    cookie.setPath("/");
+                    response.addCookie(cookie); 
+%>
         <html>
 
         <head>
@@ -49,6 +56,7 @@
                 <div class="modal-body">
                     <h2 class="heading-section">Lista de Jogos:</h2>
                 </div>
+                <form action="GerarArquivoPDF" method="post">
                 <table class="">
                   <thead>
                   <tr>
@@ -106,8 +114,9 @@
                     <% } %>
                   </tbody>
                 </table>
-
-
+                <input class='btn'type="submit" value="Gerar PDF">
+              </form>
+                
 <div class="buttons" style="margin: 30px; text-align: center;">
                 <% if (session.getAttribute("usuarioAutenticado")=="admin" ) {%>
                   <a href="/demo/AprovarJogos"><input type="button" value='Voltar' class='btn'style="margin-right: 20px;"></a>

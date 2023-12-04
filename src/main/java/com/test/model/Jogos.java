@@ -13,7 +13,9 @@ public class Jogos {
     private boolean aprovado;
     private String create;
 
-    
+    public Jogos(){
+        
+    }
 
 
     public Jogos(int id_jogo, int idUsuario, Date horario, String mandante, int golMandante, String visitante,

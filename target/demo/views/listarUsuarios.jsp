@@ -6,6 +6,12 @@
             response.sendRedirect("views/index.jsp");
         }
         %>
+        <%
+        String currentPage = request.getRequestURL().toString();
+                            Cookie cookie = new Cookie("Ultima_pagina_visitada", currentPage);
+                            cookie.setPath("/");
+                            response.addCookie(cookie); 
+        %>
             <html>
                 <head>
                     <title>Usuários</title>
